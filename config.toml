@@ -1,0 +1,15 @@
+[influxdb]
+
+host = "localhost"
+port = "8086"
+db = "ping"
+measurement = "ping"
+user = "regulus"
+pass = "regulus"
+
+[hosts]
+
+hosts = [
+    "8.8.8.8",
+    "118.27.2.1",
+]
