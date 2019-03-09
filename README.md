@@ -1,0 +1,2 @@
+# infping
+fping using influxdb.
