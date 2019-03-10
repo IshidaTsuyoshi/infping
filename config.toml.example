@@ -1,15 +1,16 @@
 [influxdb]
 
-host = "10.0.3.195"
+host = "localhost"
 port = "8086"
 db = "ping"
+RetentionPolicy = "autogen"
 measurement = "ping"
-user = "ping"
-pass = "pong"
+user = "regulus"
+pass = "regulus"
 
 [hosts]
 
 hosts = [
-    "127.0.0.1",
     "8.8.8.8",
+    "118.27.2.1",
 ]
