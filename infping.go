@@ -81,6 +81,7 @@ func readPoints(config *toml.Tree, con *client.Client) {
 
 func writePoints(config *toml.Tree, con *client.Client, host string, sent string, recv string, lossp string, min string, avg string, max string) {
     db := config.Get("influxdb.db").(string)
+    rpolicy := config.Get("influxdb.RetentionPolicy").(string)
     loss, _ := strconv.Atoi(lossp)
     pts := make([]client.Point, 1)
     fields := map[string]interface{}{}
@@ -112,7 +113,7 @@ func writePoints(config *toml.Tree, con *client.Client, host string, sent string
     bps := client.BatchPoints{
         Points:          pts,
         Database:        db,
-        RetentionPolicy: "autogen",
+        RetentionPolicy: rpolicy,
     }
     _, err := con.Write(bps)
     if err != nil {

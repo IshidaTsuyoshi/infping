@@ -5,7 +5,10 @@ Install following...
   - golang
   - influxdb
   - fping
-  Install 'fping' in /usr/sbin/fping.
+  Install 'fping' in `/usr/sbin/fping`.
+
+### Configuration
+- Set config file in `/etc/infping/config.toml`.
 
 ## Also refer to
 See blog post for more info https://hveem.no/visualizing-latency-variance-with-grafana

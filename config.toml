@@ -3,6 +3,7 @@
 host = "localhost"
 port = "8086"
 db = "ping"
+RetentionPolicy = "autogen"
 measurement = "ping"
 user = "regulus"
 pass = "regulus"
